@@ -8,14 +8,16 @@ import { avatarImages } from "@/constants";
 import { useToast } from "./ui/use-toast";
 
 interface MeetingCardProps {
+  key: string;
+  icon: string;
   title: string;
   date: string;
-  icon: string;
-  isPreviousMeeting?: boolean;
-  buttonIcon1?: string;
-  buttonText?: string;
-  handleClick: () => void;
+  isPreviousMeeting: boolean;
   link: string;
+  buttonIcon1?: string;
+  buttonText: string;
+  handleClick: () => void;
+  className?: string;
 }
 
 const MeetingCard = ({
@@ -31,7 +33,7 @@ const MeetingCard = ({
   const { toast } = useToast();
 
   return (
-    <section className="flex min-h-[258px] w-full flex-col justify-between rounded-[14px] bg-dark-1 px-5 py-8 xl:max-w-[568px]">
+    <section className="flex min-h-[258px] w-full flex-col justify-between rounded-[14px] bg-white px-5 py-8 text-black xl:max-w-[568px]">
       <article className="flex flex-col gap-5">
         <Image src={icon} alt="upcoming" width={28} height={28} />
         <div className="flex justify-between">
