@@ -15,7 +15,7 @@ const Home = () => {
           </h2>
           <div className="flex flex-col gap-2">
             <h1 className="text-4xl font-extrabold text-white lg:text-7xl">{time}</h1>
-            <p className="text-lg font-medium text-sky-1 lg:text-2xl">{date}</p>
+            <p className="text-lg lg:text-2xl font-medium text-sky-500">{date}</p>
           </div>
         </div>
       </div>
